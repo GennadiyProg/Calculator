@@ -17,4 +17,8 @@
     <string name="_3">3</string>
     <string name="_mul">*</string>
     <string name="_9">9</string>
+    <string name="_m_but">M</string>
+    <string name="_mr_but">MR</string>
+    <string name="_mc_but">MC</string>
+    <string name="_perc">%</string>
 </resources>
