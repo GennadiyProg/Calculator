@@ -25,7 +25,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="3dp"
         android:text="@string/_mr_but"
@@ -65,6 +65,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="3dp"
         android:text="@string/_8"
@@ -117,7 +118,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="3dp"
         android:text="@string/_div"
@@ -125,6 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@id/buttonPerc" />
+
     <Button
         android:id="@+id/button0"
         android:layout_width="60dp"
@@ -137,6 +139,7 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonEq"
         app:layout_constraintStart_toEndOf="@+id/buttonPoint"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
     <Button
         android:id="@+id/buttonPoint"
         android:layout_width="60dp"
@@ -179,7 +182,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="3dp"
         android:text="@string/_7"
@@ -258,7 +261,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="3dp"
         android:text="@string/_9"
