@@ -8,10 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    Button mButton0, mButton1, mButton2, mButton3, mButton4, mButton5, mButton6, mButton7, mButton8, mButton9, mButtonPoint, mButtonAdd, mButtonSub, mButtonDiv, mButtonMul, mButtonEq;
+    Button mButton0, mButton1, mButton2, mButton3, mButton4, mButton5, mButton6, mButton7, mButton8,
+            mButton9, mButtonPoint, mButtonAdd, mButtonSub, mButtonDiv, mButtonMul, mButtonEq, mButtonM, mButtonMR, mButtonMC, mButtonPerc;
     EditText mEditText;
     float mValueOne , mValueTwo;
     boolean mAddition, mSubtract, mMultiplication, mDivision;
+    float internalStorage;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         mButtonMul = (Button) findViewById(R.id.buttonMul);
         mButtonDiv = (Button) findViewById(R.id.buttonDiv);
         mButtonEq = (Button) findViewById(R.id.buttonEq);
+        mButtonM = (Button) findViewById(R.id.buttonM);
+        mButtonMR = (Button) findViewById(R.id.buttonMR);
+        mButtonMC = (Button) findViewById(R.id.buttonMC);
+        mButtonPerc = (Button) findViewById(R.id.buttonPerc);
         mEditText = (EditText) findViewById(R.id.editText1);
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,6 +174,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mEditText.setText(mEditText.getText() + ".");
             }
+        });
+        mButtonPerc.setOnClickListener(v -> {
+            if (mEditText == null) {
+                mEditText.setText("");
+            } else {
+                mValueOne = Float.parseFloat(mEditText.getText() + "");
+                mEditText.setText(mValueOne / 100.0f + "");
+            }
+        });
+        mButtonM.setOnClickListener(v -> {
+            if (mEditText != null) {
+                internalStorage = Float.parseFloat((mEditText.getText() + ""));
+                mEditText.setText("");
+            }
+        });
+        mButtonMR.setOnClickListener(v -> {
+            mEditText.setText(mEditText.getText() + Float.toString(internalStorage));
+        });
+        mButtonMC.setOnClickListener(v -> {
+            mEditText.setText("");
+            internalStorage = 0.0f;
         });
     }
 }
